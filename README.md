@@ -48,3 +48,12 @@ Für den Start reicht GitHub Pages ohne Workflow. Der Workflow ist vorbereitet, 
 - Kontaktadresse ersetzen
 - Download-Links ersetzen
 - `DEINE-DOMAIN` in `robots.txt` und `sitemap.xml` ersetzen
+
+
+## Letzter Feinschliff
+- Open-Graph- und Twitter-Metadaten
+- Canonical URL für nova-stage.de
+- Release-/Support-Leiste
+- Beta-Feedback-Bereich
+- GitHub-Issues-Link
+- Web-App-Manifest
