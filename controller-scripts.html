@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nova Stage Suite – Controller Scripts</title>
+  <meta name="description" content="Controller-Skripte für APC Mini MK2, Korg nanoKONTROL2 und Korg nanoKONTROL Studio." />
+  <link rel="icon" href="assets/logo/logo.png" />
+  <link rel="stylesheet" href="css/main.css" />
+  <script defer src="js/app.js"></script>
+  <script defer src="js/controller-scripts.js"></script>
+  <link rel="manifest" href="site.webmanifest" />
+</head>
+<body>
+  <div class="ambient-grid" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <img src="assets/logo/logo.png" alt="Nova Stage Suite Logo" />
+      <span><strong>NOVA STAGE</strong><small>PERFORMANCE SUITE</small></span>
+    </a>
+    <button class="menu-button" aria-label="Navigation öffnen">☰</button>
+    <nav class="nav">
+      <a href="index.html#module">Module</a>
+      <a href="download.html">Download</a>
+      <a href="controller-scripts.html">Controller Scripts</a>
+      <a href="docs.html">Docs</a>
+      
+      <a href="https://discord.gg/kv3p4N4aw9" target="_blank" rel="noopener noreferrer">Discord</a>
+      <a href="changelog.html">Changelog</a>
+      
+    </nav>
+    <a class="header-download" href="download.html">Download</a>
+  </header>
+
+  <main>
+    <section class="section content-panel" style="margin-top:54px">
+      <p class="eyebrow">Controller Scripts</p>
+      <h1>Controller-Skripte</h1>
+      <p>
+        Wähle ein Skript aus, um die vollständige Funktionsübersicht,
+        LED-Anzeigen, Bedienung und Installationshinweise zu öffnen.
+      </p>
+
+      <div class="controller-grid script-grid">
+        <button class="module-card script-card reveal" type="button" data-script="apc">
+          <div class="icon">🎛</div>
+          <h3>APC Mini MK2 Link Pads</h3>
+          <p>Version 3.0 – 8 Szenen, Channel-Zuweisungen, Momentary Mode und Beat-LEDs.</p>
+          <span class="card-link">Funktionsübersicht öffnen →</span>
+        </button>
+
+        <button class="module-card script-card reveal" type="button" data-script="korg2">
+          <div class="icon">🎚</div>
+          <h3>Korg nanoKONTROL2 Link Pads</h3>
+          <p>Version 1.0 – 24 frei belegbare Mute-Tasten bei weiterhin frei nutzbaren Fadern und Reglern.</p>
+          <span class="card-link">Funktionsübersicht öffnen →</span>
+        </button>
+
+        <button class="module-card script-card reveal" type="button" data-script="korgstudio">
+          <div class="icon">🎛</div>
+          <h3>Korg nanoKONTROL Studio Link Pads</h3>
+          <p>Version 5.0 – fünf Scenes mit bis zu 160 Button-Zuordnungen und stabiler LED-Engine.</p>
+          <span class="card-link">Funktionsübersicht öffnen →</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="section workflow reveal">
+      <div class="section-head">
+        <p class="eyebrow">Installation</p>
+        <h2>Grundlegender Ablauf</h2>
+      </div>
+      <div class="timeline">
+        <div><span>01</span><strong>ZIP herunterladen</strong><p>Das passende Skript über die Funktionsübersicht herunterladen.</p></div>
+        <div><span>02</span><strong>Anleitung öffnen</strong><p>Die enthaltene PDF-Anleitung lesen.</p></div>
+        <div><span>03</span><strong>Script installieren</strong><p>Den Script-Ordner nach FL Studio → Settings → Hardware kopieren.</p></div>
+        <div><span>04</span><strong>MIDI einrichten</strong><p>Controller in den MIDI Settings aktivieren und Script auswählen.</p></div>
+      </div>
+    </section>
+  </main>
+
+  <div class="script-modal" id="script-modal" aria-hidden="true">
+    <div class="script-modal-backdrop" data-close-modal></div>
+    <section class="script-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="script-modal-title">
+      <button class="script-modal-close" type="button" aria-label="Fenster schließen" data-close-modal>×</button>
+      <p class="eyebrow" id="script-modal-version"></p>
+      <h2 id="script-modal-title"></h2>
+      <p id="script-modal-summary"></p>
+
+      <div class="script-detail-columns">
+        <div>
+          <h3>Funktionen</h3>
+          <ul class="check-list" id="script-modal-features"></ul>
+        </div>
+        <div>
+          <h3>LED-Anzeige &amp; Speicherung</h3>
+          <ul class="check-list" id="script-modal-led"></ul>
+        </div>
+      </div>
+
+      <div class="script-install-box">
+        <h3>Installation</h3>
+        <ol id="script-modal-install"></ol>
+      </div>
+
+      <div class="script-modal-actions">
+        <a class="btn btn-primary" id="script-modal-download" href="#">ZIP herunterladen</a>
+        <button class="btn btn-secondary" type="button" data-close-modal>Schließen</button>
+      </div>
+    </section>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-brand">
+      <img src="assets/logo/logo.png" alt="" />
+      <div><strong>Nova Stage Suite</strong><p>Performance Software für Live-Sets.</p></div>
+    </div>
+    <div class="footer-links">
+      <a href="mailto:oliverrisska70@gmx.de">Kontakt</a>
+      <a href="https://discord.gg/kv3p4N4aw9" target="_blank" rel="noopener noreferrer">Discord</a>
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutz</a>
+    </div>
+  </footer>
+</body>
+</html>

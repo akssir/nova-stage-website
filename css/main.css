@@ -70,3 +70,110 @@
   .feedback-panel{grid-template-columns:1fr}
   .feedback-actions{justify-content:flex-start}
 }
+
+.controller-scripts-panel{margin-top:24px}.controller-scripts-panel .download-card{min-height:260px}
+
+.script-card{
+  width:100%;
+  color:inherit;
+  font:inherit;
+  text-align:left;
+  cursor:pointer;
+}
+.card-link{
+  display:inline-block;
+  margin-top:12px;
+  color:var(--cyan);
+  font-weight:900;
+  text-transform:uppercase;
+  font-size:13px;
+}
+.script-modal{
+  position:fixed;
+  inset:0;
+  z-index:100;
+  display:none;
+  place-items:center;
+  padding:24px;
+}
+.script-modal.open{display:grid}
+.script-modal-backdrop{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,.82);
+  backdrop-filter:blur(10px);
+}
+.script-modal-dialog{
+  position:relative;
+  z-index:1;
+  width:min(1000px,100%);
+  max-height:90vh;
+  overflow:auto;
+  padding:34px;
+  border:1px solid var(--cyan);
+  border-radius:16px;
+  background:linear-gradient(180deg,#09141a,#03070a);
+  box-shadow:0 0 50px rgba(0,217,255,.18),0 0 70px rgba(255,107,0,.12);
+}
+.script-modal-close{
+  position:absolute;
+  top:14px;
+  right:16px;
+  width:42px;
+  height:42px;
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.04);
+  color:var(--text);
+  font-size:28px;
+  cursor:pointer;
+}
+.script-detail-columns{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:28px;
+  margin-top:26px;
+}
+.script-install-box{
+  margin-top:24px;
+  padding:22px;
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.025);
+}
+.script-install-box li{
+  margin:10px 0;
+  line-height:1.55;
+}
+.script-modal-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+  margin-top:26px;
+}
+.modal-open{overflow:hidden}
+@media(max-width:760px){
+  .script-detail-columns{grid-template-columns:1fr}
+  .script-modal-dialog{padding:26px 20px}
+}
+
+
+/* Verbesserte Lesbarkeit für sekundäre Buttons, z. B. "Schließen" im Script-Dialog */
+.btn-secondary{
+  background:transparent;
+  color:#ffffff;
+  border:2px solid var(--cyan);
+  font-weight:800;
+  text-shadow:none;
+}
+.btn-secondary:hover,
+.btn-secondary:focus-visible{
+  background:var(--cyan);
+  color:#061018;
+  box-shadow:0 0 28px rgba(0,217,255,.34);
+}
+.script-modal-actions .btn-secondary{
+  color:#ffffff;
+}
+.script-modal-actions .btn-secondary:hover,
+.script-modal-actions .btn-secondary:focus-visible{
+  color:#061018;
+}
