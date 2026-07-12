@@ -4,6 +4,7 @@ const controllerScripts = {
     title: "APC Mini MK2 Link Pads",
     summary: "Eigenständiges FL-Studio-MIDI-Skript mit projektbezogenen Pad-Zuweisungen und acht Szenen.",
     download: "downloads/APC_Mini_Link_Pads_V3.0.zip",
+    downloadName: "APC_Mini_Link_Pads_V3.0.zip",
     features: [
       "SHIFT + Pad weist den ausgewählten Channel zu.",
       "SHIFT + belegtes Pad entfernt die Verknüpfung.",
@@ -32,11 +33,13 @@ const controllerScripts = {
       "Als Controller Type „APC Mini MK2 Link Pads“ auswählen."
     ]
   },
+
   korg2: {
     version: "Korg nanoKONTROL2 Link Pads v1.0",
     title: "Korg nanoKONTROL2 Link Pads",
     summary: "24 frei belegbare Mute-Tasten für das Channel Rack, während Fader und Drehregler frei für „Link to controller“ bleiben.",
     download: "downloads/KorgNanoKONTROL2_LinkPads_v1.0.zip",
+    downloadName: "KorgNanoKONTROL2_LinkPads_v1.0.zip",
     features: [
       "Fader und Drehregler bleiben frei für „Link to controller“.",
       "24 Solo-, Mute- und Record-Tasten dienen als frei belegbare Mute-Tasten.",
@@ -60,11 +63,13 @@ const controllerScripts = {
       "Als Controller Type „Korg nanoKONTROL2 Link Pads (user)“ auswählen."
     ]
   },
+
   korgstudio: {
     version: "Korg nanoKONTROL Studio Link Pads v5.0",
     title: "Korg nanoKONTROL Studio Link Pads",
     summary: "Fünf Scenes mit jeweils 32 eigenen Button-Zuordnungen – insgesamt bis zu 160 Verknüpfungen.",
     download: "downloads/KorgNanoKONTROL_Studio_LinkPads_v5.0.zip",
+    downloadName: "KorgNanoKONTROL_Studio_LinkPads_v5.0.zip",
     features: [
       "Fader und Drehregler sind in allen fünf Scenes identisch.",
       "Jede Scene besitzt 32 eigene Button-Zuordnungen.",
@@ -103,6 +108,7 @@ const download = document.getElementById("script-modal-download");
 
 function setList(element, items) {
   element.innerHTML = "";
+
   items.forEach((item) => {
     const li = document.createElement("li");
     li.textContent = item;
@@ -112,20 +118,26 @@ function setList(element, items) {
 
 function openScriptModal(key) {
   const data = controllerScripts[key];
-  if (!data || !modal) return;
+
+  if (!data || !modal) {
+    return;
+  }
 
   version.textContent = data.version;
   title.textContent = data.title;
   summary.textContent = data.summary;
+
   setList(features, data.features);
   setList(led, data.led);
   setList(install, data.install);
+
   download.href = data.download;
-  download.setAttribute("download", "");
+  download.setAttribute("download", data.downloadName);
 
   modal.classList.add("open");
   modal.setAttribute("aria-hidden", "false");
   document.body.classList.add("modal-open");
+
   modal.querySelector(".script-modal-close")?.focus();
 }
 
@@ -136,7 +148,9 @@ function closeScriptModal() {
 }
 
 document.querySelectorAll("[data-script]").forEach((card) => {
-  card.addEventListener("click", () => openScriptModal(card.dataset.script));
+  card.addEventListener("click", () => {
+    openScriptModal(card.dataset.script);
+  });
 });
 
 document.querySelectorAll("[data-close-modal]").forEach((button) => {
@@ -144,5 +158,7 @@ document.querySelectorAll("[data-close-modal]").forEach((button) => {
 });
 
 document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") closeScriptModal();
+  if (event.key === "Escape") {
+    closeScriptModal();
+  }
 });
