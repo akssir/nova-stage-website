@@ -3,7 +3,7 @@ const controllerScripts = {
     version: "APC Mini MK2 Link Pads v3.0",
     title: "APC Mini MK2 Link Pads",
     summary: "Eigenständiges FL-Studio-MIDI-Skript mit projektbezogenen Pad-Zuweisungen und acht Szenen.",
-    download: "downloads/APC_Mini_Link_Pads_V3.0.zip",
+    download: "https://github.com/akssir/nova-stage-website/releases/download/apc-v3.0/APC_Mini_Link_Pads_V3.0.zip",
     downloadName: "APC_Mini_Link_Pads_V3.0.zip",
     features: [
       "SHIFT + Pad weist den ausgewählten Channel zu.",
@@ -38,7 +38,7 @@ const controllerScripts = {
     version: "Korg nanoKONTROL2 Link Pads v1.0",
     title: "Korg nanoKONTROL2 Link Pads",
     summary: "24 frei belegbare Mute-Tasten für das Channel Rack, während Fader und Drehregler frei für „Link to controller“ bleiben.",
-    download: "downloads/KorgNanoKONTROL2_LinkPads_v1.0.zip",
+    download: "https://github.com/akssir/nova-stage-website/releases/download/KorgNanoKONTROL2_LinkPads_v1.0/KorgNanoKONTROL2_LinkPads_v1.0.zip",
     downloadName: "KorgNanoKONTROL2_LinkPads_v1.0.zip",
     features: [
       "Fader und Drehregler bleiben frei für „Link to controller“.",
@@ -68,7 +68,7 @@ const controllerScripts = {
     version: "Korg nanoKONTROL Studio Link Pads v5.0",
     title: "Korg nanoKONTROL Studio Link Pads",
     summary: "Fünf Scenes mit jeweils 32 eigenen Button-Zuordnungen – insgesamt bis zu 160 Verknüpfungen.",
-    download: "downloads/KorgNanoKONTROL_Studio_LinkPads_v5.0.zip",
+    download: "https://github.com/akssir/nova-stage-website/releases/download/KorgNanoKONTROL_Studio_LinkPads_v5.0/KorgNanoKONTROL_Studio_LinkPads_v5.0.zip",
     downloadName: "KorgNanoKONTROL_Studio_LinkPads_v5.0.zip",
     features: [
       "Fader und Drehregler sind in allen fünf Scenes identisch.",
